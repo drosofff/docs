@@ -3,6 +3,13 @@ python: "2.7"
 sudo: required
 dist: trusty
 
+env:
+  global:
+    - TOX_ENV=py27
+    - SITE_URL="https://drosofff.github.io/docs/"
+    - GH_USER_NAME="Christophe Antoniewski"
+    - GH_USER_EMAIL="drosofff@gmail.com"
+    - GH_REF="github.com/drosofff/docs.git"
 
 deploy:
   provider: script
