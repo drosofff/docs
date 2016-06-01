@@ -19,6 +19,8 @@ cd mkdocs_build
 #)
 git clone https://github.com/drosofff/docs.git
 cd docs
+git config credential.helper "store --file=.git/credentials"
+echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 mkdocs gh-deploy --clean -m "gh-deployed by travis"
 
 
