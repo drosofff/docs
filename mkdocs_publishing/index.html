@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Create this documentation - Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Create this documentation";
+    var mkdocs_page_input_path = "mkdocs_publishing.md";
+    var mkdocs_page_url = "/mkdocs_publishing/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Create this documentation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#how-to-easily-publish-a-report-or-documentation-using-mkdocs-in-github">How to easily publish a report or documentation using mkdocs in GitHub</a></li>
+                
+                    <li><a class="toctree-l4" href="#afterward">Afterward</a></li>
+                
+                    <li><a class="toctree-l4" href="#see-locally-the-web-docs">see locally the web docs</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Students</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../test_M2/">M2 test</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Create this documentation</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="how-to-easily-publish-a-report-or-documentation-using-mkdocs-in-github">How to easily publish a report or documentation using mkdocs in GitHub</h1>
+<ol>
+<li>Create a new repository on your GitHub account. You can seed it with a README.txt file</li>
+<li>Clone this repository locally</li>
+<li>Locally :<ul>
+<li>create immediately a new branch <code>git branch gh-pages</code>, checkout <code>git checkout gh-pages</code> and push to the remote repository <code>push origin gh-pages</code>(this will create the new branch on the remote)</li>
+<li><strong>go back to the master branch</strong> <code>git checkout master</code></li>
+<li>create an mkdocs.yml file similar to this <a href="https://github.com/ARTbio/ansible-artimed/blob/master/mkdocs.yml">file</a></li>
+<li>create a docs subdirectory where you .md markdown files will go</li>
+<li>add, commit and push to the origin/master of the remote GitHub report</li>
+<li>install mkdocs <code>pip install mkdocs</code></li>
+<li>And build your html remote site in your gh-branch using the command
+<code>mkdocs `mkdocs gh-deploy -c -m "&lt;commit message&gt;"</code></li>
+<li>You are done !</li>
+</ul>
+</li>
+</ol>
+<h2 id="afterward">Afterward</h2>
+<p>You just work locally in your master branch, commit and push your .md and .yml files, and using mkdocs gh-deploy to synchronize your remote gh-pages branch</p>
+<h2 id="see-locally-the-web-docs">see locally the web docs</h2>
+<p>Still in your master branch, run <code>mkdocs server</code> and see locally your documentation with your web browser</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../test_M2/" class="btn btn-neutral float-right" title="M2 test">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../test_M2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
