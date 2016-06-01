@@ -16,7 +16,7 @@ sudo pip install mkdocs
 #    git reset upstream/gh-pages
 #)
 git clone https://github.com/drosofff/docs.git
-cd $SCRIPT_PATH
+cd docs
 mkdocs gh-deploy --clean -m "gh-deployed by travis"
 
 
