@@ -24,3 +24,4 @@ Still in your master branch, run `mkdocs serve` and see locally your documentati
 Automatize the doc build with travis
 
 - using this [documentation](http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing)
+- testing this on an IFB instance
