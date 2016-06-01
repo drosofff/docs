@@ -11,5 +11,7 @@ env:
     - GH_USER_EMAIL="drosofff@gmail.com"
     - GH_REF="github.com/drosofff/docs.git"
 
+install: true
+
 script:
   - bash ./deploy.sh
