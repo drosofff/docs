@@ -4,19 +4,21 @@
 SCRIPT_PATH="$(cd "$(dirname "$0")" && pwd -P)"
 sudo pip install mkdocs
 # Initialize gh-pages checkout
-mkdir -p docs/html
-(
-    cd docs/html
-    git init
-    git config user.name "${GH_USER_NAME}"
-    git config user.email "${GH_USER_EMAIL}"
-    git remote add upstream "https://$GH_TOKEN@${GH_REF}"
-    git fetch upstream
-    git reset upstream/gh-pages
-)
+# mkdir -p docs/html
 
+#(
+#    cd docs/html
+#    git init
+#    git config user.name "${GH_USER_NAME}"
+#    git config user.email "${GH_USER_EMAIL}"
+#    git remote add upstream "https://$GH_TOKEN@${GH_REF}"
+#    git fetch upstream
+#    git reset upstream/gh-pages
+#)
+git clone https://github.com/drosofff/docs.git
 cd $SCRIPT_PATH
-mkdocs build --clean --site-dir docs/html
+mkdocs gh-deploy --clean -m "gh-deployed by travis"
+
 
 # Commit and push the documentation to gh-pages
 #(
