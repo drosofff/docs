@@ -13,15 +13,16 @@ cd mkdocs_build
 #    git init
 #    git config user.name "${GH_USER_NAME}"
 #    git config user.email "${GH_USER_EMAIL}"
-#    git remote add upstream "https://$GH_TOKEN@${GH_REF}"
+#    git remote add upstream "https://${GH_TOKEN}@${GH_REF}"
 #    git fetch upstream
 #    git reset upstream/gh-pages
 #)
+DATE=`date`
 git clone https://github.com/drosofff/docs.git
 cd docs
 git config credential.helper "store --file=.git/credentials"
 echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-mkdocs gh-deploy --clean -m "gh-deployed by travis"
+mkdocs gh-deploy --clean -m "gh-deployed by travis $DATE"
 
 
 # Commit and push the documentation to gh-pages
