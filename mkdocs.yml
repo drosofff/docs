@@ -1,0 +1,7 @@
+site_name: Documentation
+pages:
+ - Home: index.md
+ - Create this documentation: mkdocs_publishing.md
+ - Students:
+   - M2 test: test_M2.md
+theme: readthedocs
