@@ -18,5 +18,5 @@ You just work locally in your master branch, commit and push your .md and .yml f
 
 
 ## see locally the web docs
-Still in your master branch, run `mkdocs server` and see locally your documentation with your web browser
+Still in your master branch, run `mkdocs serve` and see locally your documentation with your web browser
 
