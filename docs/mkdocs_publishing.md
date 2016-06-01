@@ -2,9 +2,7 @@
 
 1. Create a new repository on your GitHub account. You can seed it with a README.txt file
 - Clone this repository locally
-- Locally :
-    - create immediately a new branch `git branch gh-pages`, checkout `git checkout gh-pages` and push to the remote repository `push origin gh-pages`(this will create the new branch on the remote)
-    - **go back to the master branch** `git checkout master`
+- Locally (in the master branch):
     - create an mkdocs.yml file similar to this [file](https://github.com/ARTbio/ansible-artimed/blob/master/mkdocs.yml)
     - create a docs subdirectory where you .md markdown files will go
     - add, commit and push to the origin/master of the remote GitHub report
@@ -16,7 +14,8 @@
     - You are done !
     
 ## Afterward
-You just work locally in your master branch, commit and push your .md and .yml files, and using mkdocs gh-deploy to synchronize your remote gh-pages branch
+You just work locally in your master branch, commit and push your .md and .yml files in your master branch, and using mkdocs gh-deploy to synchronize your remote gh-pages branch.
+
 
 ## see locally the web docs
 Still in your master branch, run `mkdocs server` and see locally your documentation with your web browser
