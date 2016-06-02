@@ -73,7 +73,7 @@
                 
                     <li><a class="toctree-l4" href="#see-locally-the-web-docs">see locally the web docs</a></li>
                 
-                    <li><a class="toctree-l4" href="#to-do">To do:</a></li>
+                    <li><a class="toctree-l4" href="#automatize-the-doc-build-with-travis">Automatize the doc build with travis</a></li>
                 
             
             </ul>
@@ -147,12 +147,28 @@
 <p>You just work locally in your master branch, commit and push your .md and .yml files in your master branch, and using mkdocs gh-deploy to synchronize your remote gh-pages branch.</p>
 <h2 id="see-locally-the-web-docs">see locally the web docs</h2>
 <p>Still in your master branch, run <code>mkdocs serve</code> and see locally your documentation with your web browser</p>
-<h2 id="to-do">To do:</h2>
-<p>Automatize the doc build with travis</p>
+<h2 id="automatize-the-doc-build-with-travis">Automatize the doc build with travis</h2>
 <ul>
-<li>using this <a href="http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing">documentation</a></li>
-<li>testing this on an IFB instance</li>
+<li>Activate the Travis service for the GitHub repo</li>
+<li>Create a personal access token in the <a href="https://github.com/settings/tokens">personal GitHub settings</a></li>
+<li><strong>copy</strong> this token in a safe place and before closing the window give it the <em>appropriate</em> rights in reading/writing repos or branch</li>
+<li>install Travis locally client using</li>
 </ul>
+<pre><code>sudo gem install travis -v 1.8.2 --no-rdoc --no-ri # ruby has to be installed
+</code></pre>
+
+<ul>
+<li>lint the .travis.yml file wich is present at the root of the master branch of this repo using <code>travis lint</code></li>
+<li>add or change the encrypted token in this file by</li>
+</ul>
+<pre><code>travis encrypt GH_TOKEN=&quot;&lt;the toked created above and copied&gt;&quot; --add
+</code></pre>
+
+<p>This add a <code>secure</code> variable in the <code>env</code>section
+see this <a href="http://stackoverflow.com/questions/18027115/committing-via-travis-ci-failing">documentation</a> for more info
+- testing this on an IFB instance
+- copy both the valid .travis.yml and deploy.sh in the root on the master branch of the repo.</p>
+<p>This worked for me, but of course the important part is to adapt these settings to your personal token</p>
               
             </div>
           </div>
