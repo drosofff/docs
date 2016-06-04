@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "GitHub Documentation\n\n\ntest first strategy", 
+            "text": "GitHub Documentation", 
             "title": "Home"
         }, 
         {
             "location": "/#github-documentation", 
-            "text": "test first strategy", 
+            "text": "", 
             "title": "GitHub Documentation"
         }, 
         {
