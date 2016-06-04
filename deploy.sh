@@ -1,5 +1,20 @@
 #!/usr/bin/env bash
 
+#### New strategy that works if rights of the GH_TOKEN are properly set up !
+SCRIPT_PATH="$(cd "$(dirname "$0")" && pwd -P)"
+sudo pip install mkdocs
+mkdir mkdocs_build
+cd mkdocs_build
+# Initialize gh-pages checkout
+DATE=`date`
+git clone https://github.com/drosofff/docs.git
+cd docs
+git config credential.helper "store --file=.git/credentials"
+echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+mkdocs gh-deploy --clean -m "gh-deployed by travis $DATE"
+cd $SCRIPT_PATH
+
+### Previous Marius's strategy
 # We start by building and deploying the documentation
 #SCRIPT_PATH="$(cd "$(dirname "$0")" && pwd -P)"
 #DATE=`date`
@@ -28,17 +43,3 @@
 #git push -q upstream HEAD:gh-pages
 #)
 #cd $SCRIPT_PATH
-
-#### alternate that fails because mkdocs gh-deploy does not takes the credentials in .git/credentials
-SCRIPT_PATH="$(cd "$(dirname "$0")" && pwd -P)"
-sudo pip install mkdocs
-mkdir mkdocs_build
-cd mkdocs_build
-# Initialize gh-pages checkout
-DATE=`date`
-git clone https://github.com/drosofff/docs.git
-cd docs
-git config credential.helper "store --file=.git/credentials"
-echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-mkdocs gh-deploy --clean -m "gh-deployed by travis $DATE"
-cd $SCRIPT_PATH
