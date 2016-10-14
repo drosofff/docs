@@ -38,4 +38,6 @@ see this [documentation](http://stackoverflow.com/questions/18027115/committing-
 - testing this on an IFB instance
 - copy both the valid .travis.yml and deploy.sh in the root on the master branch of the repo.
 
-This worked for me, but of course the important part is to adapt these settings to your personal token
+This worked for me, but of course the important part is to adapt these settings to your personal token.
+
+october 14th. Testing the automated deployment in gh-pages
