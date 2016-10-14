@@ -9,7 +9,7 @@
     - install mkdocs `pip install mkdocs`
     - And build your html remote site in your gh-branch using the command
     ```
-    mkdocs `mkdocs gh-deploy -c -m "<commit message>" 
+    mkdocs gh-deploy -c -m "<commit message>" 
     ```
     - You are done !
     
